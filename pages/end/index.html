@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Déploiement du code</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    #start-screen {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    #start-button {
+      padding: 20px 40px;
+      font-size: 24px;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+      color: #00ff00;
+      background: black;
+      border: 2px solid #00ff00;
+      border-radius: 5px;
+      text-shadow: 0 0 10px #00ff00;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      animation: blink 1s infinite;
+    }
+
+    #start-button:hover {
+      background: #00ff00;
+      color: black;
+      text-shadow: none;
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+    }
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: none;
+      /* Masqué au début */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="start-screen">
+    <button id="start-button">DEPLOYER LE CODE</button>
+  </div>
+  <video id="background-video" src="images/end_video.mp4"></video>
+
+  <script>
+    // Cibler les éléments HTML
+    const startScreen = document.getElementById('start-screen');
+    const startButton = document.getElementById('start-button');
+    const backgroundVideo = document.getElementById('background-video');
+
+    // Activer la vidéo et le son au clic
+    startButton.addEventListener('click', () => {
+      // Masquer l'écran de démarrage
+      startScreen.style.display = 'none';
+
+      // Afficher la vidéo
+      backgroundVideo.style.display = 'block';
+
+      // Activer le son et lancer la lecture
+      backgroundVideo.muted = false;
+      backgroundVideo.play();
+    });
+
+    // Rediriger après la fin de la vidéo
+    backgroundVideo.addEventListener('ended', () => {
+      // Remplacez 'next_page.html' par l'URL ou le chemin de la page à charger
+      window.location.href = "404.html";
+    });
+  </script>
+</body>
+
+</html>

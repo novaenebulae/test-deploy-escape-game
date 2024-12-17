@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            margin: 50px;
+            padding: 0;
+            background: white;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 80vw;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 5rem;
+            margin: 20px 0;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        #additional-text {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            white-space: pre-wrap;
+            margin-top: 70px;
+            text-align: left;
+        }
+
+        #homeButton {
+            display: none;
+            /* Caché au départ */
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: black;
+            background-color: white;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #homeButton:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>404 Not Found</h1>
+    <p>The page you are looking for does not exist.</p>
+    <p>It might have been removed, had its name changed, or is temporarily unavailable.</p>
+    <p id="additional-text"></p>
+    <button id="homeButton" onclick="redirectToHome()">ACCUEIL</button>
+
+    <script>
+        // Texte à afficher caractère par caractère
+        const additionalText = "Après modification du code source, l'IA tourne dans une boucle infinie et ses processeurs surchauffent avant de s'enflammer et fusionner. Bravo, vous êtes un super-hero de l'informatique !";
+
+        // Référencer l'élément où afficher le texte
+        const textContainer = document.getElementById("additional-text");
+
+        // Fonction pour afficher le texte caractère par caractère
+        function displayText () {
+            let index = 0;
+            const interval = setInterval(() => {
+                textContainer.textContent += additionalText[index];
+                index++;
+                if (index === additionalText.length) {
+                    clearInterval(interval); // Arrêter une fois tout le texte affiché
+                    showHomeButton(); // Afficher le bouton après le texte
+                }
+            }, 50); // 50ms entre chaque caractère
+        }
+
+
+
+        // Fonction pour afficher le bouton Accueil
+        function showHomeButton () {
+            homeButton.style.display = "block";
+        }
+
+        // Redirection vers la page d'accueil
+        function redirectToHome () {
+            window.location.href = "https://fonzy57.github.io/ran-parts-du-dev/"; // Remplacez par l'URL de votre page d'accueil
+        }
+
+        // Attendre 5 secondes avant de commencer à afficher le texte
+        setTimeout(displayText, 2000);
+    </script>
+</body>
+
+</html>

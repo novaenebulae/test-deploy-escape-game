@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    color: #d1d1d1;
+}
+
+.password-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff79;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.31);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+    border: 1px solid rgba(255, 255, 255, 0.408);
+}
+
+.password-input {
+    width: 70%;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 30px;
+    margin: 30px 0px;
+}
+
+svg path {
+    fill: white;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    flex-direction: column;
+}
+
+#password_input {
+        padding: 10px;
+        height: 35px;
+        width: 80%;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 30px;
+        resize: none;
+        background-color: #0000001d;
+        color: white;
+}
+
+.save-password-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.save-password-button:hover {
+    background-color: #218838;
+}
+
+.save-password-button:active {
+    background-color: #1e7e34;
+}
+
+.rules {
+    margin-top: 20px;
+}
+
+.rule-card {
+    border: 2px solid red;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #0000001d;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.rule-card h3 {
+    margin: 0 0 5px 0;
+}
+
+.rule-card p {
+    margin: 0;
+}
+
+.img-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.rule-img {
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #fff;
+}
+
+#rule-8 .rule-img {
+    max-width: 200px;
+    max-height: 100px;
+}
+
+#rule-10 .rule-img {
+    width: 300px;
+}
+
+svg {
+    max-width: 60px;
+    height: auto;
+}
+
+.progress-container {
+    width: 60%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: red;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+

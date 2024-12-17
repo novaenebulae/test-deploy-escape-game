@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Portail Connexion Administrateur</title>
+</head>
+
+<body>
+  <!-- Canvas pour le fond -->
+  <canvas id="canvas"></canvas>
+
+  <!-- Contenu principal -->
+  <div class="container">
+    <h1>Connexion Administrateur</h1>
+    <p>Mot de passe crypté : <strong id="text-chiffre">unbkjwjwnblnbcujern</strong></p>
+
+    <label for="cle">Essayer une clé :</label>
+    <input id="cle" type="text" placeholder="Entrez la clé">
+    <button id="btn-dechiffrer">Déchiffrer</button>
+    <div id="text-dechiffre">Veuillez entrer une clé.</div>
+
+    <button id="redirect" style="display:none;">
+      <a href="../change-password/index.html">Étape suivante</a>
+    </button>
+
+  </div>
+
+  <script src="script.js" defer></script>
+  <script src="../../scripts/VIRUS.js"></script>
+  <script src="../../scripts/popup.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      popupMessage(3);
+    });
+  </script>
+
+  </div>
+
+
+</body>
+
+</html>

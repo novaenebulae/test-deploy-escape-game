@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Description de votre site web">
+    <title>Connexion réseau</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <video id="background-video" autoplay loop muted>
+        <source src="images/background-video.mp4" type="video/mp4">
+    </video>
+
+    <main>
+        <h2 id="binary-text" class="binaire"></h2> <!-- Vide pour l'animation -->
+        <section id="contact">
+            <div>
+                <form id="binary-form">
+                    <div>
+                        <label for="message">Adresse réseau :</label>
+                    </div>
+                    <div>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">CONNEXION</button>
+                    </div>
+                </form>
+            </div>
+            <div id="response"></div> <!-- Zone pour afficher le résultat -->
+
+            <div class="connection-message">
+                <div id="connection-status" style="display: none;">
+                    <p id="connecting">Connexion en cours.</p>
+                </div>
+                <div id="connection-established" style="display: none;">
+                    <p>Connexion établie. Vous pouvez vous connecter.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conteneur pour les boutons d'indices -->
+        <div id="hints-container">
+            <button id="hint1" disabled>Indice 1</button>
+            <button id="hint2" disabled>Indice 2</button>
+            <button id="hint3" disabled>Indice 3</button>
+        </div>
+
+        <!-- Bouton de redirection (initialement caché) -->
+        <a href="../login/index.html" id="nav-connection-next">
+            <button id="redirect-button" style="display: none;">
+                LOGIN
+            </button>
+        </a>
+
+    </main>
+    <script src="../../scripts/VIRUS.js"></script>
+    <script src="../../scripts/popup.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            popupMessage(1);
+        });
+    </script>
+
+    <script src="script.js"></script>
+
+
+    
+</body>
+
+</html>

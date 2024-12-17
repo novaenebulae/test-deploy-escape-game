@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Énigme d'algorithmie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <video id="background-video" autoplay loop muted>
+        <source src="images/background.mp4" type="video/mp4">
+    </video>
+    <canvas id="c"></canvas>
+    <div id="container1">
+        <h1>MODIFICATION FICHIER SOURCE</h1>
+        <p>
+            Voici le fichier :
+        </p>
+        <pre class="code-block">
+
+    code_modifiable = 1
+    
+    si (code_modifiable = 1):
+        statut = "Code modifiable"
+    sinon
+        statut = "Code protégé"
+    </pre>
+        <p>À la fin de l'exécution, quelle est la valeur de la variable <strong>statut</strong> ?</p>
+        <form id="enigme-form1">
+            <label for="answer1">Votre réponse :</label>
+            <input type="text" id="answer1" required autofocus>
+            <button type="submit">VÉRIFIER LE CODE</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <div id="container2" class="container2Disabled">
+        <h1>DÉTRUIRE L'IA</h1>
+        <p>Voici le fichier :</p>
+        <pre class="code-block">
+
+    variable = Faux
+    
+    Tant que (variable){
+        surchauffe_processeurs()
+    }
+        </pre>
+        <p>Modifier la variable pour provoquer la <strong>surchauffe des
+                processeurs</strong> de l'IA !
+        </p>
+        <form id="enigme-form2">
+            <label for="answer2">Nouvelle variable :</label>
+            <input type="text" id="answer2" required>
+            <button type="submit" id="button2">VÉRIFIER LE CODE</button> 
+        </form>
+        <div id="result2"></div>
+        <div class="next-button">
+            <button onclick="goNext()" id="goNext">COMPILER LE CODE !</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="../../scripts/VIRUS.js"></script>
+    <script src="../../scripts/popup.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            popupMessage(6);
+        });
+    </script>
+</body>
+
+</html>

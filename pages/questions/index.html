@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Accès au Code de l'IA</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <canvas class="matrix-bg" id="matrix-canvas"></canvas>
+  <div class="container">
+    <div id="intro-screen">
+      <h1>ACCÈS AU CODE DE l'IA</h1>
+      <div class="context">
+        <p>CONDITION D'ACCÈS : 80% DE RÉPONSES CORRECTES</p>
+        <p>Temps limité : 60 secondes</p>
+      </div>
+      <button id="start-btn" class="btn">INITIALISER PROTOCOLE DE CORRUPTION</button>
+    </div>
+
+    <div id="quiz-screen" style="display: none">
+      <div id="timer">TEMPS RESTANT : 60 secondes</div>
+      <div id="corruption-level">CORRUPTION DE L'IA : 0%</div>
+      <div id="score-tracker">SCORE : 0/10</div>
+
+      <div id="question-container">
+        <h2 id="current-question"></h2>
+        <div id="options-container"></div>
+      </div>
+    </div>
+
+    <div id="success-screen">
+      <h2>ACCÈS AUTORISÉ</h2>
+      <div class="success-details">
+        <h3>SYSTÈME CORROMPU</h3>
+        <p>La protection d'accés a été neutralisée avec succès.</p>
+        <p id="final-score"></p>
+      </div>
+      <a href="../files/index.html" class="btn">ACCÉDER AU CODE DE L'IA</a>
+    </div>
+
+    <div id="failure-screen" style="display: none">
+      <h2>ACCÈS NON AUTORISÉ</h2>
+      <div class="success-details" style="background: rgba(255, 0, 0, 0.4)">
+        <h3>SYSTÈME VERROUILÉ</h3>
+        <p>L'intelligence artificielle conserve son contrôle.</p>
+        <p id="failure-score"></p>
+      </div>
+      <a href="./index.html" class="btn">RÉESSAYER</a>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="../../scripts/VIRUS.js"></script>
+  <script src="../../scripts/popup.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      popupMessage(5);
+    });
+  </script>
+</body>
+
+</html>

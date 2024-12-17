@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../../styles/global.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+  <title>Login</title>
+</head>
+
+<body class="main">
+
+  <div id="reveal-container">
+    <input type="text" id="solution" placeholder="?????" />
+    <span><i class="fa-solid fa-arrow-right"></i></span>
+    <p id="text-reveal">
+      fonzy57.github.io/escape-dev/pages/decrypt/<span id="reveal-mot1" class="reveal"></span>-<span id="reveal-mot2"
+        class="reveal"></span>-<span id="reveal-mot3" class="reveal"></span>.html
+    </p>
+  </div>
+  <div id="dot-container"></div>
+  <script src="script.js"></script>
+  <script src="../../scripts/VIRUS.js"></script>
+  <script src="../../scripts/popup.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      popupMessage(2);
+    });
+  </script>
+</body>
+
+</html>

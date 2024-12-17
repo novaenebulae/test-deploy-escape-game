@@ -1,0 +1,145 @@
+* {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #002200;
+}
+
+/* Styles pour les éléments <canvas> */
+canvas {
+  position: fixed; /* Fixe le canvas à l'écran */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Largeur complète de la fenêtre */
+  height: 100vh; /* Hauteur complète de la fenêtre */
+  z-index: -1; /* Derrière tout le contenu */
+  background-color: black; /* Fond noir */
+}
+
+/* Contenu principal */
+.container {
+  position: relative; /* Positionnement au-dessus du canvas */
+  z-index: 1; /* Au-dessus du canvas */
+  background: rgba(0, 64, 0, 0.555); /* Fond vert foncé semi-transparent */
+  padding: 20px;
+  margin: 25vh auto;
+  width: 50%;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace; /* Police à espacement fixe */
+  color: #00ff00; /* Texte vert vif */
+  border-radius: 10px;
+
+  /* Effet Matrix pour la bordure */
+  border: 4px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  z-index: -1;
+  background: linear-gradient(180deg, transparent, #006200c7, transparent);  background-size: 100% 200%; /* Défilement vertical */
+  border-radius: 12px;
+  animation: borderMatrixEffect 3s infinite alternate; /* Animation */
+}
+
+/* Animation de l'effet Matrix sur la bordure */
+@keyframes borderMatrixEffect {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+/* Style des titres */
+.container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00ff00; /* Vert vif */
+  font-weight: bold;
+}
+
+/* Style des paragraphes */
+.container p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #00ff00; /* Vert vif */
+}
+
+/* Style des labels */
+.container label {
+  display: block;
+  margin: 15px 0 0;
+  font-size: 1rem;
+  color: #00ff00; /* Vert vif */
+}
+
+/* Style de l'input */
+.container input {
+  width: 80%;
+  padding: 10px;
+  margin: 20px 0;
+  font-size: 1rem;
+  color: #00ff00; /* Vert vif */
+  background: #002200; /* Fond vert très foncé */
+  border: 2px solid #008000; /* Bordure verte foncée */
+  border-radius: 5px;
+  text-align: center;
+  outline: none; /* Supprime la bordure par défaut */
+}
+
+/* Effet d'input focus */
+.container input:focus {
+  border-color: #00ff00; /* Change la couleur de bordure au focus */
+  background: #003300; /* Fond légèrement plus clair */
+}
+
+/* Style du bouton */
+.container button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #002200; /* Texte sombre */
+  background: #00ff00; /* Fond vert vif */
+  border: 2px solid #008000; /* Bordure verte foncée */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+/* Effet de hover sur le bouton */
+.container button:hover {
+  background: #008000; /* Fond vert foncé */
+  color: #00ff00; /* Texte vert vif */
+}
+
+.button #redirect {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #002200;
+  background: #00ff00;
+  border: 2px solid #008000;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+/* Texte déchiffré */
+.container #text-dechiffre {
+  font-size: 1.5rem;
+  margin: 20px auto;
+  font-weight: bold;
+  color: #00ff00; /* Vert vif */
+}
